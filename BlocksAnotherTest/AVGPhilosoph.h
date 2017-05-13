@@ -18,6 +18,4 @@
 @property (nonatomic, strong) NSCondition *condition;
 @property (nonatomic, copy) NSString *philName;
 
-- (void)eating;
-
 @end

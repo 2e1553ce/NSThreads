@@ -24,14 +24,19 @@
 }
 
 - (void)main{
-    [self.leftPalka getPalka];
-    [self.rightPalka getPalka];
-    NSLog(@"%@ is eating", self.name);
-    sleep(1);
-    self.isFull = YES;
-    [self.leftPalka putPalka];
-    [self.rightPalka putPalka];
+    
+    if(!self.leftPalka.isLocked && !self.rightPalka.isLocked) {
+        [self.leftPalka getPalka];
+        [self.rightPalka getPalka];
+        NSLog(@"%@ is eating", self.name);
+        sleep(1);
+        self.isFull = YES;
+        [self.leftPalka putPalka];
+        [self.rightPalka putPalka];
+        NSLog(@"%@ Finished!", self.name);
+    }
 }
-
+// priorities
+// livelock
 
 @end

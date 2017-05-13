@@ -10,6 +10,8 @@
 
 @interface AVGPalka : NSObject
 
+@property (nonatomic, assign) BOOL isLocked;
+
 - (void)getPalka;
 - (void)putPalka;
 

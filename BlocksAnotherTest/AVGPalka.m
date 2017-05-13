@@ -25,10 +25,12 @@
 }
 
 - (void)getPalka {
-    [self.lock lock];
+    //[self.lock lock];
+    self.isLocked = YES;
 }
 - (void)putPalka {
-     [self.lock unlock];
+    //[self.lock unlock];
+    self.isLocked = NO;
 }
 
 @end

@@ -36,7 +36,5 @@
         NSLog(@"%@ Finished!", self.name);
     }
 }
-// priorities
-// livelock
 
 @end

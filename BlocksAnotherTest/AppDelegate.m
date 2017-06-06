@@ -22,8 +22,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    // cache size?
-    // nslock y vilok
     self.philosophs = [NSMutableArray new];
     self.palki = [NSMutableArray new];
     
@@ -78,7 +76,7 @@
     [phil2 start];
     [phil3 start];
     [phil4 start]; //
-    [phil5 start]; // bez locks, priorities - property
+    [phil5 start];
 
     
     return YES;

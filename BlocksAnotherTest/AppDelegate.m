@@ -72,12 +72,13 @@
     //[phil5 start];
     [self.philosophs addObject:phil5];
     
+    /*
     [phil1 start];
     [phil2 start];
     [phil3 start];
     [phil4 start]; //
     [phil5 start];
-
+     */
     
     return YES;
 }

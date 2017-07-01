@@ -25,16 +25,34 @@
 
 - (void)main{
     
-    if(!self.leftPalka.isLocked && !self.rightPalka.isLocked) {
-        [self.leftPalka getPalka];
-        [self.rightPalka getPalka];
-        NSLog(@"%@ is eating", self.name);
-        sleep(1);
-        self.isFull = YES;
-        [self.leftPalka putPalka];
-        [self.rightPalka putPalka];
-        NSLog(@"%@ Finished!", self.name);
+    #warning LOCKS
+    /*
+    [self.leftPalka getPalka];
+    [self.rightPalka getPalka];
+    NSLog(@"%@ is eating", self.name);
+    sleep(1);
+    [self.leftPalka putPalka];
+    [self.rightPalka putPalka];
+    NSLog(@"%@ Finished!", self.name);
+     */
+    
+    #warning PRIORITIES
+    if(self.leftPalka.priority < self.rightPalka.priority) {
+        while(!self.leftPalka.isFree) continue;
+        self.leftPalka.isFree = NO;
+        while(!self.rightPalka.isFree) continue;
+        self.rightPalka.isFree = NO;
     }
+    else {
+        while(!self.rightPalka.isFree) continue;
+        self.rightPalka.isFree = NO;
+        while(!self.leftPalka.isFree) continue;
+        self.leftPalka.isFree = NO;
+    }
+    NSLog(@"%@ is eating", self.name);
+    self.leftPalka.isFree = YES;
+    self.rightPalka.isFree = YES;
+    NSLog(@"%@ Finished!", self.name);
 }
 
 @end

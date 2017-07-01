@@ -20,17 +20,24 @@
     self = [super init];
     if(self) {
         _lock = [NSLock new];
+        _isFree = YES;
+    }
+    return  self;
+}
+
+- (instancetype)initWithPriority:(NSInteger)priority {
+    self = [super init];
+    if(self) {
+        
     }
     return  self;
 }
 
 - (void)getPalka {
-    //[self.lock lock];
-    self.isLocked = YES;
+    [self.lock lock];
 }
 - (void)putPalka {
-    //[self.lock unlock];
-    self.isLocked = NO;
+    [self.lock unlock];
 }
 
 @end

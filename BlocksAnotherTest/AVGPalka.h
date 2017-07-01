@@ -10,9 +10,12 @@
 
 @interface AVGPalka : NSObject
 
-@property (nonatomic, assign) BOOL isLocked;
+@property (nonatomic, assign) NSInteger priority;
+@property (nonatomic, assign) BOOL isFree;
 
 - (void)getPalka;
 - (void)putPalka;
+
+- (instancetype)initWithPriority:(NSInteger)priority;
 
 @end

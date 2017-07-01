@@ -48,28 +48,28 @@
     phil2.name = @"2";
     phil2.leftPalka = palka2;
     phil2.rightPalka = palka3;
-    //[phil2 start];
+    [phil2 start];
     [self.philosophs addObject:phil2];
     
     AVGPhilosoph *phil3 = [AVGPhilosoph new];
     phil3.name = @"3";
     phil3.leftPalka = palka3;
     phil3.rightPalka = palka4;
-    //[phil3 start];
+    [phil3 start];
     [self.philosophs addObject:phil3];
     
     AVGPhilosoph *phil4 = [AVGPhilosoph new];
     phil4.name = @"4";
     phil4.leftPalka = palka4;
     phil4.rightPalka = palka5;
-    //[phil4 start];
+    [phil4 start];
     [self.philosophs addObject:phil4];
     
     AVGPhilosoph *phil5 = [AVGPhilosoph new];
     phil5.name = @"5";
     phil5.leftPalka = palka5;
     phil5.rightPalka = palka1;
-    //[phil5 start];
+    [phil5 start];
     [self.philosophs addObject:phil5];
     
     /*
